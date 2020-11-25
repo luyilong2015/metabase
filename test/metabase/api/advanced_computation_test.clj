@@ -24,6 +24,7 @@
                                                                 :breakout    [[:fk-> $orders.user_id $people.state]
                                                                               [:fk-> $orders.user_id $people.source]
                                                                               [:fk-> $orders.product_id $products.category]]}))]
+          (println (clojure.pprint/pprint result))
           ;; This resultset is going to be entirely too large to write a full equality assertion for.
           (is (= 4 (count result)))
 
